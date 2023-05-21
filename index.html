@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="container wrap">
+            <a href="./index.html" class="logo"><img src="./img/logo.png" alt="Логотип «Аллегория»"></a>
+            <ul class="nav wrap" id="navbar">
+                <li><a href="#about">О проекте</a></li>
+                <li><a href="#features">Инфраструктура</a></li>
+                <li><a href="#acounting">Варианты покупки</a></li>
+                <li><a href="#low">Акции от застройщика</a></li>
+                <li><a href="#low">Ход строительства</a></li>
+                <li>
+                    <hr>
+                </li>
+                <li class="hidden">
+                    <a href="tel:+73852590570" class="phone">
+                        <span>Телефон:</span>
+                        <b>+7 (3852) 590-570</b>
+                    </a>
+                </li>
+                <li class="hidden">
+                    <a href="mailto:allegoriya.too@mail.ru" class="phone">
+                        <span>Наша почта:</span>
+                        <b>allegoriya.too@mail.ru</b>
+                    </a>
+                </li>
+            </ul>
+            <a href="tel:+73852590570" class="phone top">
+                <span>Телефон для справок:</span>
+                <b>+7 (3852) 590-570</b>
+            </a>
+            <button class="btn btn_outline">Заказать звонок</button>
+            <sapn id="modalOpen"></sapn>
+            <button class="btn-menu" id="menuBtn"><span></span></button>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h1>ЭКОЛОГИЧНАЯ ЖИЗНЬ</h1>
+            <p class="main__descr">Жилой комплекс “Серебряный бор-4” от партнёра застройщика “Строительная перспектива”
+            </p>
+            <button class="btn">Заказать звонок</button>
+            <a href="#" class="link">Посмотреть планировки</a>
+        </div>
+    </main>
+
+    <section class="welcome">
+        <div class="container">
+            <h2>
+                ДОБРО ПОЖАЛОВАТЬ В ЖИЛОЙ КОМПЛЕКС “СЕРЕБРЯНЫЙ БОР”!
+            </h2>
+            <p class="text">КРАСИВЫЕ ВИДЫ НА АЛТАЙСКИЙ ЛЕС</p>
+            <div class="wrap">
+                <img src="img/img-1.jpg" alt="img">
+                <img src="img/img-2.jpg" alt="img">
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="modal-form">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&#x2715;</button>
+            <h3>Заказать звонок</h3>
+            <form action="sendmail.php" method="post" id="form">
+                <input type="tel" name="phone_number" placeholder="Номер телефона" required>
+                <input type="text" name="name" placeholder="ФИО" required>
+                <button class="btn btn-3">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

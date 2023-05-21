@@ -1,0 +1,167 @@
+header
+    padding: 13px 0 
+    position: relative
+    width: 100%
+    z-index: 9999
+    transition: background-color ease .3s
+    background-color: #fff
+
+    .container
+        z-index: unset
+        max-width: 1900px
+
+    .logo
+        width: 90px
+        margin: 0
+    .phone
+        color: #000
+        text-align: right
+        margin-left: 40px
+        b
+            color: #000
+
+    .nav
+        margin: 0 auto 
+        padding: 0
+        list-style: none
+        a
+            display: inline-block
+            font-weight: 500
+            font-size: 15px
+            color: #000
+            line-height: 120%
+            padding: 10px 15px 8px
+            // text-transform: uppercase
+            &:hover
+                opacity: 1
+                color: #000
+                background-color: $yelow
+
+        .hidden
+            display: none
+
+    .btn
+        padding: 15px 30px 13px
+        margin: 0 0 0 36px
+        font-size: 16px
+        &-menu
+            display: none
+
+    @media screen and ( max-width: 1500px )
+        .nav
+            margin: 0 auto 
+            a
+                font-size: 16px
+
+            @media screen and ( min-width: 1200px )
+                li 
+                    &:first-child,
+                    &:nth-child(2)
+                        display: none
+
+        .logo
+            max-width: 130px
+
+        .nav
+
+    @media screen and ( max-width: 1200px )
+        padding: 14px 0
+
+        .nav
+            position: fixed
+            top: 0
+            left: 0
+            z-index: 9999
+            height: 100vh
+            width: 330px
+            max-width: 80%
+            background-color: #fff
+            display: block
+            margin: 0
+            padding: 70px 0 0
+            visibility: hidden
+            transform: translateX(-100%)
+            opacity: 0
+            transition: all .5s cubic-bezier(0.4, -0.02, 0, 0.96)
+            box-shadow: 250px 0 0 450px rgba(0, 0, 0, .5)
+            li
+                padding: 0
+
+            a
+                color: #000
+                font-size: 18px
+                font-weight: 600
+                display: block
+                padding: 20px 20px
+
+            hr 
+                height: 1px
+                background-color: #000
+                margin: 15px 0 30px
+
+            .hidden
+                display: block
+                padding: 0
+                &:nth-child(1)
+                    border-top: 1px solid #000
+                .phone
+                    text-align: left
+                    margin: 0
+                    padding: 6px 20px
+                    b
+                        font-size: 18px
+                        color: $prime
+                    span
+                        color: #000
+                        font-size: 14px
+
+        .phone
+            margin: 0 30px 0 auto
+            span
+                font-size: 13px
+            b
+                font-size: 19px
+
+        .logo
+            top: 0
+            max-width: 120px
+
+        .btn
+            display: none
+            &-menu
+                display: inline-block
+                z-index: 9999999
+
+        &.active
+            .nav
+                visibility: visible
+                transform: translateX(0)
+                opacity: 1
+
+    @media screen and ( max-width: 700px )
+        padding: 10px 0
+        &::before
+            width: 82%
+
+        .logo
+            max-width: 115px
+            margin: 0
+
+        .container
+            padding: 0 16px
+
+        .phone
+            &.top
+                margin-right: 15px
+                background-image: url('../img/call.svg')
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                span, b
+                    font-size: 1px
+                    color: transparent
+                    width: 30px
+                    height: 30px
+
+        .btn
+            &-menu
