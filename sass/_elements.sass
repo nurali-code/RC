@@ -9,8 +9,9 @@ $black: #000
 $black_upper: #374246
 $yelow: #E9F8F9
 $third: #3C84AB
-$second: #85CDFD
+$second: #a8c07b
 $prime: #6DA802
+
 body
     min-height: 100vh
     color: $black
@@ -95,12 +96,12 @@ section
     vertical-align: middle
     text-align: center
     color: #fff
-    padding: 20px 52px 18px
+    padding: 22px 52px 20px
     background-color: $prime
     background-repeat: no-repeat
     background-position: center center
     background-size: auto 70%
-    border-radius: 60px
+    border-radius: 70px
     border: 2px solid transparent
     box-shadow: 0px 20px 56px -10px rgba($prime, .5)
     &-menu
@@ -179,6 +180,8 @@ section
         border: 2px solid $prime
         background-color: transparent
         box-shadow: none
+        &:hover
+            background-color: rgba($prime, .1)
 
 .link
     color: white
@@ -253,7 +256,7 @@ select
 
 @media screen and (max-width: 1500px)
     h1
-        font-size: 48px
+        // font-size: 48px
 
     h2
         font-size: 38px
