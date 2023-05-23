@@ -9,9 +9,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css?ver=12345">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
                 <span>Телефон для справок:</span>
                 <b>+7 (3852) 590-570</b>
             </a>
-            <button class="btn btn_outline">Заказать звонок</button>
+            <button data-modal="modal-form" class="btn btn_outline">Заказать звонок</button>
             <sapn id="modalOpen"></sapn>
             <button class="btn-menu" id="menuBtn"><span></span></button>
         </div>
@@ -54,10 +54,13 @@
     <main class="main">
         <div class="container">
             <h1>ЭКОЛОГИЧНАЯ ЖИЗНЬ</h1>
-            <p class="main__descr">Жилой комплекс “Серебряный бор-4” от партнёра застройщика “Строительная перспектива”
+            <p class="text">Жилой комплекс “Серебряный бор-4” от партнёра застройщика “Строительная перспектива”
             </p>
-            <button class="btn">Заказать звонок</button>
-            <a href="#" class="link">Посмотреть планировки</a>
+            <img src="img/main.jpg" class="main__bg" alt="main">
+            <div class="main-row">
+                <button class="btn" data-modal="modal-form">Заказать звонок</button>
+                <a href="#" class="link">Посмотреть планировки</a>
+            </div>
         </div>
     </main>
 
@@ -109,12 +112,12 @@
             </div>
         </div>
         <div class="container">
-            <p class="info__text">Жить в окружении реликтового ленточного бора и одновременно в современном городе.
+            <p class="text">Жить в окружении реликтового ленточного бора и одновременно в современном городе.
                 Когда лес – в нескольких шагах от крыльца, а до центра города – рукой подать. Когда деревья окружают с
                 четырех сторон, защищая от шума, зноя и пыли, превращая Ваш дом в настоящий зеленый оазис. Это все –
                 Жилой Комплекс Серебряный бор.</p>
             <div class="wrap">
-                <p class="info__descr">Хотите получить лучшие варианты планировок по специальной цене?</p>
+                <p class="text">Хотите получить лучшие варианты планировок по специальной цене?</p>
                 <button class="btn">Посмотреть планировку</button>
             </div>
         </div>
@@ -122,22 +125,34 @@
 
     <section class="why">
         <h2 class="container">почему выбирают квартиры жк “Серебряный бор-4”?</h2>
-        <div class="why-slider">
-            <div class="why-slide">
-                <h3>Расположение в тихом месте</h3>
-                <p>Настоящие любители природы по достоинству оценят все преимущества жизни по соседству с ленточным
-                    бором. Стоит выйти за калитку — и Вы сможете насладиться тишиной и спокойствием, полюбоваться
-                    буйством красок природы и отдохнуть в тени деревьев. Жильцам комплекса точно будет чем заняться в
-                    выходные с семьей или друзьями.</p>
-                <img src="img/slide.jpg" alt="slide">
+        <div class="slider">
+            <div class="slide">
+                <img src="img/slide-3.jpg" alt="slide">
+                <h3>Вместительные кладовые</h3>
+                <p>На цокольном этаже домов предусмотрены вместительные кладовые. Пусть Ваша квартира всегда будет
+                    светлой и свободной, а вместительная и недорогая кладовая сохранит сезонные и крупногабаритные
+                    вещи!.</p>
             </div>
-            <div class="why-slide">
+            <div class="slide">
+                <img src="img/slide.jpg" alt="slide">
                 <h3>Расположение в тихом месте</h3>
                 <p>Настоящие любители природы по достоинству оценят все преимущества жизни по соседству с ленточным
                     бором. Стоит выйти за калитку — и Вы сможете насладиться тишиной и спокойствием, полюбоваться
                     буйством красок природы и отдохнуть в тени деревьев. Жильцам комплекса точно будет чем заняться в
                     выходные с семьей или друзьями.</p>
+            </div>
+            <div class="slide">
                 <img src="img/slide-2.jpg" alt="slide">
+                <h3>Остеклённые лоджии</h3>
+                <p>Интегрированный балкон в общую структуру дома создаст полное ощущение уюта и большого пространства.
+                    Переобустройет лоджии в рабочий кабинет, мастерскую, игровую или зону для установки тренажера.</p>
+            </div>
+            <div class="slide">
+                <img src="img/slide-4.jpg" alt="slide">
+                <h3>Удобные гардеробные</h3>
+                <p>Казалось бы, гардеробную можно позволить себе только в роскошном частном доме или огромной квартире.
+                    А вот и нет! В ЖК “Серебряный Бор-4” даже в однокомнатных квартирах спланировано пространство под
+                    гардеробную.</p>
             </div>
         </div>
     </section>
@@ -145,7 +160,8 @@
     <section class="infrastructure">
         <div class="container">
             <h2>ИНФРАСТРУКТУРА</h2>
-            <p>В комплексе предусмотрено строительство детского сада и образовательной школы. На территории жилого
+            <p class="text">В комплексе предусмотрено строительство детского сада и образовательной школы. На территории
+                жилого
                 комплекса предусмотрены современные детские площадки, беседки, зоны барбекю, фонтан — все, чтобы
                 скрасить досуг и детям, и взрослым. Во дворе будут обустроены спортивные площадки, а всего в 50 метрах
                 от границы ЖК находится знаменитая Лыжня здоровья, идеально подходящая для треккинга, пробежек, прогулок
@@ -163,15 +179,15 @@
             <p class="infrastructure-item"> Лыжная база “Динамо”, «Лыжня здоровья».</p>
         </div>
         <div class="wrap connetc">
-            <p>Мы ответим на все Ваши вопросы!</p>
-            <button class="btn">Заказать консультацию</button>
+            <p class="text">Мы ответим на все Ваши вопросы!</p>
+            <button class="btn" data-modal="modal-form">Заказать консультацию</button>
         </div>
     </section>
 
     <section class="planing">
         <div class="container">
             <h2>ПЛАНИРОВОЧНЫЕ РЕШЕНИЯ</h2>
-            <p>Дом по ул. Нагорная 6-я, 15г/5 корпус 1 стр.</p>
+            <p class="text">Дом по ул. Нагорная 6-я, 15г/5 корпус 1 стр.</p>
         </div>
         <div class="filter wrap">
             <button class="filter__btn active">1 комнатные</button>
@@ -185,7 +201,7 @@
         </div>
         <button class="btn">Подобрать планировку</button>
         <h3 class="container">План этажей</h3>
-        <div class="slider">
+        <div class="slider slider-floors">
             <div class="slide"><img src="img/floor-1.jpg" alt="floor"></div>
             <div class="slide"><img src="img/floor-3.jpg" alt="floor"></div>
             <div class="slide"><img src="img/floor-2.jpg" alt="floor"></div>
@@ -228,7 +244,7 @@
         <div class="container">
             <div class="pop">
                 <h2>Акции застройщика</h2>
-                <p class="pop__text">При покупке квартиры
+                <p class="text">При покупке квартиры
                     в ЖК “Серебряный бор”,
                     пользуйтесь выгодными условиями</p>
                 <p class="pop-item">
@@ -249,7 +265,7 @@
         <div class="container wrap">
             <div class="title">
                 <h2>Варианты оплаты</h2>
-                <p>Квартиру в ЖК Юбилейный можно приобрести любым удобным для вас способом:</p>
+                <p class="text">Квартиру в ЖК Юбилейный можно приобрести любым удобным для вас способом:</p>
                 <ul>
                     <li>100% оплата</li>
                     <li>Ипотека от 5,4%</li>
@@ -271,7 +287,7 @@
     <section class="process">
         <div class="container">
             <h2>ХОД СТРОИТЕЛЬСТВА</h2>
-            <p>
+            <p class="text">
                 объекты сдаются в срок! Ниже вы можете увидеть актуальный ход строительства объекта на нашем сайте!
             </p>
         </div>
@@ -285,7 +301,7 @@
     <footer>
         <div class="container">
             <h2>позвоните нам!</h2>
-            <p>Оставьте заявку, и менеджер свяжется с вами</p>
+            <p class="text">Оставьте заявку, и менеджер свяжется с вами</p>
             <a href="tel:+73852590570" class="phone">+7 (3852) 590-570</a>
             <div class="bottom wrap">
                 <a href="#main" class="logo"><img src="img/logo-big.png" alt="logo"></a>
@@ -296,14 +312,14 @@
                     </address>
                     <a class="mail" href="mailto:barnaul@dynasty-24.com">barnaul@dynasty-24.com</a>
                     <div class="wrap">
-                        <a href="#"><img src="img/yt.png" alt="yt"></a>
-                        <a href="#"><img src="img/vk.png" alt="yt"></a>
-                        <a href="#"><img src="img/OK.png" alt="yt"></a>
-                        <a href="#"><img src="img/tg.png" alt="yt"></a>
+                        <a href="#" target="_blank"><img src="img/yt.png" alt="yt"></a>
+                        <a href="#" target="_blank"><img src="img/vk.png" alt="yt"></a>
+                        <a href="#" target="_blank"><img src="img/OK.png" alt="yt"></a>
+                        <a href="#" target="_blank"><img src="img/tg.png" alt="yt"></a>
                     </div>
                 </div>
                 <div class="col">
-                    <img src="img/logo_2.jpg" alt="logo">
+                    <img src="img/logo_2.png" alt="logo">
                 </div>
             </div>
         </div>
@@ -320,6 +336,10 @@
             </form>
         </div>
     </div>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/scripts.js?ver=12345"></script>
 
 
 </body>

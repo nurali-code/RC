@@ -1,5 +1,5 @@
 header
-    padding: 13px 0 
+    padding: 13px 0
     position: relative
     width: 100%
     z-index: 9999
@@ -9,10 +9,12 @@ header
     .container
         z-index: unset
         max-width: 1700px
+        flex-wrap: nowrap
 
     .logo
         width: 90px
         margin: 0
+
     .phone
         color: #000
         text-align: right
@@ -35,7 +37,7 @@ header
             &:hover
                 opacity: 1
                 color: #000
-                background-color: $yelow
+                background-color: rgba($prime, .1)
 
         .hidden
             display: none
@@ -49,23 +51,27 @@ header
 
     @media screen and ( max-width: 1500px )
         .nav
-            margin: 0 auto 
+            margin: 0 auto 0 30px
             a
-                font-size: 16px
+                font-size: 14px
+                padding: 8px 12px 7px
 
-            @media screen and ( min-width: 1200px )
-                li 
-                    &:first-child,
-                    &:nth-child(2)
-                        display: none
+            // @media screen and ( min-width: 1200px )
+            //     li
+            //         &:first-child,
+            //         &:nth-child(2)
+            //             display: none
 
         .logo
-            max-width: 130px
+            width: 80px
 
-        .nav
+        .btn
+            &_outline
+                display: none
 
     @media screen and ( max-width: 1200px )
         padding: 14px 0
+        border-bottom: 1px solid rgba(0, 0, 0, .1)
 
         .nav
             position: fixed
@@ -94,7 +100,7 @@ header
                 display: block
                 padding: 20px 20px
 
-            hr 
+            hr
                 height: 1px
                 background-color: #000
                 margin: 15px 0 30px
@@ -139,12 +145,10 @@ header
                 opacity: 1
 
     @media screen and ( max-width: 700px )
-        padding: 10px 0
-        &::before
-            width: 82%
+        padding: 7px 0
 
         .logo
-            max-width: 115px
+            max-width: 50px
             margin: 0
 
         .container

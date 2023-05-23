@@ -112,6 +112,7 @@ section
         height: 50px
         margin: 0
         span
+            pointer-events: none
             position: absolute
             top: 50%
             left: 20%
@@ -140,11 +141,12 @@ section
                 left: 0
 
         &.active
+            background-color: #fff
             span
                 top: 55%
                 left: 50%
                 transform: translate(-50%, -50%) rotate(-45deg)
-                background-color: #fff
+                background-color: #000
                 &::before
                     background-color: transparent
                 &::after
@@ -152,7 +154,7 @@ section
                     width: 100%
                     left: 50%
                     transform: translate(-50%, -50%) rotate(-90deg)
-                    background-color: #fff
+                    background-color: #000
 
     &:hover
         opacity: 1
@@ -190,9 +192,10 @@ section
             background-color: #e4e4e4
 
 .link
-    color: white
+    color: #000
+    font-weight: 600
     font-size: 18px
-    border-bottom: 2px dashed white
+    border-bottom: 2px dashed #000
 
 strong, b
     font-weight: 600
@@ -253,9 +256,15 @@ select
         color: $second
         line-height: 130%
 
+.text
+    max-width: 1060px
+    font-weight: 400
+    font-size: 25px
+    line-height: 150%
+
 @media screen and (max-width: 1500px)
     h1
-        // font-size: 48px
+        font-size: 60px
 
     h2
         font-size: 38px
@@ -264,7 +273,11 @@ select
         font-size: 16px
 
     .container
-        max-width: 1100px
+        max-width: 1060px
+
+    .text
+        max-width: 800px
+        font-size: 20px
 
     .btn
         &_outline
@@ -278,15 +291,25 @@ select
     section
         padding: 60px 0
 
+    h1
+        font-size: 50px
+
+    h2
+        font-size: 32px
+
     .wrap
         &_title
             display: block
             h2, p
                 max-width: 100%
                 width: 100%
+
+    .text
+        font-size: 18px
+
 @media screen and (max-width: 700px)
     h1, h2
-        font-size: 28px
+        font-size: 24px
 
     h3
         font-size: 24px
@@ -295,27 +318,20 @@ select
         padding: 0 15px
 
     .btn
-        font-size: 18px
+        font-size: 14px
         border-width: 1px
         padding: 16px 30px 14px
 
-    .dropdown
-        &-btn
-            font-size: 14px
-            padding: 20px 50px 20px 14px
-            &::before
-                right: 12px
+    .text
+        font-size: 14px
 
-        &-content
-            padding: 0 14px
-            &.active
-                opacity: 1
-                padding: 0 14px 20px
-
-    .text__pop
-        padding: 40px
-        font-size: 16px
-        line-height: 140%
+    input,
+    textarea,
+    select
+        height: 50px
+        font-weight: normal
+        font-size: 14px
+        margin-bottom: 10px
 
 @media screen and (max-width: 500px)
     .container

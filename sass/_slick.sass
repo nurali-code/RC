@@ -28,10 +28,7 @@
             cursor: hand
 
     &-slider
-        padding-bottom: 40px
-        width: calc( 100% + 6px )
-        position: relative
-        left: -3px
+        width: 100%
         .slick-track,
         .slick-list
             -webkit-transform: translate3d(0, 0, 0)
@@ -169,4 +166,7 @@
 
     @media screen and ( max-width: 700px )
         &-prev 
-            display: none
+            left: 10px
+
+        &-next 
+            right: 10px

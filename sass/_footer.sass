@@ -11,10 +11,8 @@ footer
     .container
         max-width: 1000px
 
-    p
+    .text
         font-weight: 500
-        font-size: 25px
-        line-height: 35px
         margin-bottom: 55px
 
     .logo
@@ -34,10 +32,11 @@ footer
         max-width: 380px
         a
             display: inline-block
+            margin: 3px 0
         .wrap
             justify-content: flex-start
             gap: 14px
-            margin-top: 25px
+            margin-top: 20px
 
             img
                 max-width: 58px
@@ -49,17 +48,54 @@ footer
         color: #000
 
     .bottom
-        padding: 200px 0 0
+        padding: 250px 0 0
         align-items: flex-end
 
-    @media screen and ( max-width: 1340px )
-        .address
-
     @media screen and ( max-width: 1200px )
-        .container
+        background-size: 210% auto,cover
+        .text
+            margin-bottom: 30px
+
+        .phone
+            font-size: 60px
+
+        .logo
+            max-width: 140px
+
+        .col
+            max-width: 350px
+
+        .bottom
+            padding-top: 160px
 
     @media screen and ( max-width: 700px )
-        .address
+        text-align: center
+        .text 
+            font-size: 16px 
+            max-width: 300px
+            margin: 0 auto 30px
+        h2
+            margin-bottom: 10px
+
+        .phone
+            font-size: 30px
+            margin-bottom: 20px
+
+        .wrap
+            justify-content: center !important
+
+        .bottom
+            background-color: #fff
+            padding: 30px 15px
+            text-align: center
+            .logo
+                margin-bottom: 20px
+
+            .col
+                margin-bottom: 20px
+
+        address, .mail
+            font-size: 16px
 
 .developt
     background-color: #fff
