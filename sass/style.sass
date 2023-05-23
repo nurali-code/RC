@@ -14,6 +14,9 @@
     padding-bottom: 300px
     color: #fff
     overflow: hidden
+    .container 
+        position: static
+        z-index: unset
 
     @media screen and ( min-width: 1200px )
         &::before
@@ -97,6 +100,11 @@
         line-height: 35px
         margin: 0
         max-width: 400px
+
+    .connect 
+        p 
+            max-width: 600px
+            margin: 0
 
 .welcome
     padding-top: 50px
@@ -432,7 +440,7 @@
     p
         text-transform: uppercase
         font-weight: 500
-        max-width: 750px
+        max-width: 800px
         margin: 0 auto 80px
 
     .slider
@@ -553,6 +561,10 @@
 
         &__descr
             margin-bottom: 20px
+
+        .connect 
+            p 
+                margin-bottom: 30px
 
     .why
         .slide

@@ -3,6 +3,17 @@ $('#menuBtn').on('click', function () {
     $('#menuBtn, header, body').toggleClass('active');
 });
 
+$('a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});
+
+
 $('.slider').slick({
     infinite: true,
     slidesToShow: 1,
@@ -56,4 +67,19 @@ $(function () {
             hideModals();
         }
     });
+});
+
+$("form").submit(function () {
+    $('form .btn').attr('disabled', 'disabled');
+    sender = "../telegram.php";
+    $.ajax({
+        type: "POST",
+        method: 'POST',
+        url: sender,
+        data: $(this).serialize()
+    }).done(function () {
+        $('form .btn').removeAttr('disabled');
+        $('form').trigger('reset');
+        $('.modal').fadeOut(); alert('Спасибо, за заявку , ожидайте с вами свяжется специалист');
+    }); return false;
 });

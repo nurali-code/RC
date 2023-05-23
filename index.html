@@ -20,11 +20,11 @@
         <div class="container wrap">
             <a href="./index.html" class="logo"><img src="./img/logo.png" alt="Логотип «Аллегория»"></a>
             <ul class="nav wrap" id="navbar">
-                <li><a href="#about">О проекте</a></li>
-                <li><a href="#features">Инфраструктура</a></li>
-                <li><a href="#acounting">Варианты покупки</a></li>
-                <li><a href="#low">Акции от застройщика</a></li>
-                <li><a href="#low">Ход строительства</a></li>
+                <li><a href="#info">О проекте</a></li>
+                <li><a href="#infrastructure">Инфраструктура</a></li>
+                <li><a href="#planing">Варианты покупки</a></li>
+                <li><a href="#shares">Акции от застройщика</a></li>
+                <li><a href="#process">Ход строительства</a></li>
                 <li>
                     <hr>
                 </li>
@@ -35,9 +35,9 @@
                     </a>
                 </li>
                 <li class="hidden">
-                    <a href="mailto:allegoriya.too@mail.ru" class="phone">
+                    <a href="mailto:barnaul@dynasty-24.com" class="phone">
                         <span>Наша почта:</span>
-                        <b>allegoriya.too@mail.ru</b>
+                        <b>barnaul@dynasty-24.com</b>
                     </a>
                 </li>
             </ul>
@@ -51,7 +51,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="main">
         <div class="container">
             <h1>ЭКОЛОГИЧНАЯ ЖИЗНЬ</h1>
             <p class="text">Жилой комплекс “Серебряный бор-4” от партнёра застройщика “Строительная перспектива”
@@ -59,7 +59,7 @@
             <img src="img/main.jpg" class="main__bg" alt="main">
             <div class="main-row">
                 <button class="btn" data-modal="modal-form">Заказать звонок</button>
-                <a href="#" class="link">Посмотреть планировки</a>
+                <a href="#planing" class="link">Посмотреть планировки</a>
             </div>
         </div>
     </main>
@@ -77,7 +77,7 @@
         </div>
     </section>
 
-    <section class="info">
+    <section class="info" id="info">
         <h2 class="container">ДИНАСТИЯ 24</h2>
         <div class="wrap info-wrapper">
             <div class="info-item">
@@ -116,9 +116,9 @@
                 Когда лес – в нескольких шагах от крыльца, а до центра города – рукой подать. Когда деревья окружают с
                 четырех сторон, защищая от шума, зноя и пыли, превращая Ваш дом в настоящий зеленый оазис. Это все –
                 Жилой Комплекс Серебряный бор.</p>
-            <div class="wrap">
+            <div class="wrap connect">
                 <p class="text">Хотите получить лучшие варианты планировок по специальной цене?</p>
-                <button class="btn">Посмотреть планировку</button>
+                <a href="#planing" class="btn">Посмотреть планировку</a>
             </div>
         </div>
     </section>
@@ -157,15 +157,17 @@
         </div>
     </section>
 
-    <section class="infrastructure">
+    <section class="infrastructure" id="infrastructure">
         <div class="container">
             <h2>ИНФРАСТРУКТУРА</h2>
-            <p class="text">В комплексе предусмотрено строительство детского сада и образовательной школы. На территории
+            <p class="text">
+                В комплексе предусмотрено строительство детского сада и образовательной школы. На территории
                 жилого
                 комплекса предусмотрены современные детские площадки, беседки, зоны барбекю, фонтан — все, чтобы
                 скрасить досуг и детям, и взрослым. Во дворе будут обустроены спортивные площадки, а всего в 50 метрах
                 от границы ЖК находится знаменитая Лыжня здоровья, идеально подходящая для треккинга, пробежек, прогулок
-                и велосипедных поездок. Это позволит жильцам вести активный образ жизни и оставаться в хорошей форме.
+                и велосипедных поездок. Это позволит
+                жильцам вести активный образ жизни и оставаться в хорошей форме.
             </p>
         </div>
         <div class="infrastructure-wrap wrap">
@@ -184,7 +186,7 @@
         </div>
     </section>
 
-    <section class="planing">
+    <section class="planing" id="planing">
         <div class="container">
             <h2>ПЛАНИРОВОЧНЫЕ РЕШЕНИЯ</h2>
             <p class="text">Дом по ул. Нагорная 6-я, 15г/5 корпус 1 стр.</p>
@@ -199,7 +201,7 @@
             <div class="slide"><img src="img/plan-2.jpg" alt="plan"></div>
             <div class="slide"><img src="img/plan-3.jpg" alt="plan"></div>
         </div>
-        <button class="btn">Подобрать планировку</button>
+        <button data-modal="modal-order" class="btn">Подобрать планировку</button>
         <h3 class="container">План этажей</h3>
         <div class="slider slider-floors">
             <div class="slide"><img src="img/floor-1.jpg" alt="floor"></div>
@@ -237,10 +239,10 @@
                 <p>стяжка <br> пола</p>
             </div>
         </div>
-        <button class="btn btn_outline">Оставить заявку</button>
+        <button data-modal="modal-order" class="btn btn_outline">Оставить заявку</button>
     </section>
 
-    <section class="shares">
+    <section class="shares" id="shares">
         <div class="container">
             <div class="pop">
                 <h2>Акции застройщика</h2>
@@ -251,7 +253,7 @@
                     <img src="img/sber.jpg" alt="sber">
                     <span>Скидка -0.9% для <br>ипотеки в СБЕРе</span>
                 </p>
-                <button class="btn">Просчитать ипотеку</button>
+                <button class="btn" data-modal="modal-calc">Просчитать ипотеку</button>
                 <p class="pop__descr">*О других акциях застройщика можно узнать по телефону</p>
             </div>
             <button class="btn btn_white">+7 (3852) 590-570</button>
@@ -265,7 +267,7 @@
         <div class="container wrap">
             <div class="title">
                 <h2>Варианты оплаты</h2>
-                <p class="text">Квартиру в ЖК Юбилейный можно приобрести любым удобным для вас способом:</p>
+                <p class="text">Квартиру в ЖК Серебрянный Бор можно приобрести любым удобным для вас способом:</p>
                 <ul>
                     <li>100% оплата</li>
                     <li>Ипотека от 5,4%</li>
@@ -274,21 +276,22 @@
                     <li>военная ипотека</li>
                 </ul>
             </div>
-            <form action="#">
-                <input type="text" required placeholder="Введите Ваше имя">
-                <input type="tel" required placeholder="Введите Ваш телефон">
-                <input type="number" required placeholder="Сумма ипотеки">
-                <input type="number" required placeholder="Срок кредитования">
+            <form action="telegram.php" method="post">
+                <input type="hidden" name="form" value="Форма с ипотекой">
+                <input type="text" required placeholder="Введите Ваше имя" name="u-name">
+                <input type="tel" name="u-phone" required placeholder="Введите Ваш телефон">
+                <input type="number" name="u-price" required placeholder="Сумма ипотеки">
+                <input type="number" name="u-terms" required placeholder="Срок кредитования">
                 <button type="submit" class="btn btn_outline">Получить условия</button>
             </form>
         </div>
     </section>
 
-    <section class="process">
+    <section class="process" id="process">
         <div class="container">
             <h2>ХОД СТРОИТЕЛЬСТВА</h2>
             <p class="text">
-                объекты сдаются в срок! Ниже вы можете увидеть актуальный ход строительства объекта на нашем сайте!
+                объекты сдаются в срок! Ниже вы можете увидеть актуальный ход строительства объекта!
             </p>
         </div>
         <div class="slider">
@@ -304,19 +307,13 @@
             <p class="text">Оставьте заявку, и менеджер свяжется с вами</p>
             <a href="tel:+73852590570" class="phone">+7 (3852) 590-570</a>
             <div class="bottom wrap">
-                <a href="#main" class="logo"><img src="img/logo-big.png" alt="logo"></a>
+                <a href="#main" class="logo"><img src="img/logo.png" alt="logo"></a>
                 <div class="col">
                     <address>
                         Центральный офис АН Династия 24
                         г Барнаул, ул Балтийская, зд 20
                     </address>
                     <a class="mail" href="mailto:barnaul@dynasty-24.com">barnaul@dynasty-24.com</a>
-                    <div class="wrap">
-                        <a href="#" target="_blank"><img src="img/yt.png" alt="yt"></a>
-                        <a href="#" target="_blank"><img src="img/vk.png" alt="yt"></a>
-                        <a href="#" target="_blank"><img src="img/OK.png" alt="yt"></a>
-                        <a href="#" target="_blank"><img src="img/tg.png" alt="yt"></a>
-                    </div>
                 </div>
                 <div class="col">
                     <img src="img/logo_2.png" alt="logo">
@@ -329,9 +326,37 @@
         <div class="modal-content">
             <button class="modal-close" id="modalClose">&#x2715;</button>
             <h3>Заказать звонок</h3>
-            <form action="sendmail.php" method="post" id="form">
-                <input type="tel" name="phone_number" placeholder="Номер телефона" required>
-                <input type="text" name="name" placeholder="ФИО" required>
+            <form action="telegram.php" method="post">
+                <input type="hidden" name="form" value="Заказ звонока">
+                <input type="text" required placeholder="Введите Ваше имя" name="u-name">
+                <input type="tel" name="u-phone" required placeholder="Введите Ваш телефон">
+                <button class="btn btn-3">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-order">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&#x2715;</button>
+            <h3>ОСТАВИТЬ ЗАЯВКУ</h3>
+            <form action="telegram.php" method="post">
+                <input type="hidden" name="form" value="Оставить заявку">
+                <input type="text" required placeholder="Введите Ваше имя" name="u-name">
+                <input type="tel" name="u-phone" required placeholder="Введите Ваш телефон">
+                <button class="btn btn-3">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-calc">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&#x2715;</button>
+            <h3>Просчитать ипотеку</h3>
+            <form action="telegram.php" method="post">
+                <input type="hidden" name="form" value="Просчитать ипотеку">
+                <input type="text" required placeholder="Введите Ваше имя" name="u-name">
+                <input type="tel" name="u-phone" required placeholder="Введите Ваш телефон">
+                <textarea name="Коментарий" placeholder="Коментарий" cols="30" rows="10"></textarea>
                 <button class="btn btn-3">Отправить</button>
             </form>
         </div>
