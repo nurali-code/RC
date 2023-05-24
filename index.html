@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RC</title>
-
+    <title>Жилой комплекс "Серебряный бор-4": Лесной оазис в современном городе</title>
+    <meta name="description"
+        content="Живите в окружении природы и наслаждайтесь комфортом с жилым комплексом 'Серебряный бор-4' от партнёра застройщика 'Строительная перспектива'. Расположенный в нескольких шагах от реликтового ленточного бора, этот комплекс предлагает современные удобства и зеленые пространства, создавая идеальное место для жизни.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css?ver=12345">
+    <link rel="stylesheet" href="./css/style.css?ver=345678">
 </head>
 
 <body>
@@ -192,14 +193,20 @@
             <p class="text">Дом по ул. Нагорная 6-я, 15г/5 корпус 1 стр.</p>
         </div>
         <div class="filter wrap">
-            <button class="filter__btn active">1 комнатные</button>
-            <button class="filter__btn">2 комнатные</button>
-            <button class="filter__btn">3 комнатные</button>
+            <button class="filter__btn active" data-filter="one">1 комнатные</button>
+            <button class="filter__btn" data-filter="second">2 комнатные</button>
+            <button class="filter__btn" data-filter="third">3 комнатные</button>
         </div>
-        <div class="slider">
-            <div class="slide"><img src="img/plan-1.jpg" alt="plan"></div>
-            <div class="slide"><img src="img/plan-2.jpg" alt="plan"></div>
-            <div class="slide"><img src="img/plan-3.jpg" alt="plan"></div>
+        <div class="slider planing-slider">
+            <div class="slide one"><img src="img/1.jpg" alt="plan"></div>
+            <div class="slide one"><img src="img/1-2.jpg" alt="plan"></div>
+            <div class="slide one"><img src="img/1-3.jpg" alt="plan"></div>
+            <div class="slide second"><img src="img/2.jpg" alt="plan"></div>
+            <div class="slide second"><img src="img/2-2.jpg" alt="plan"></div>
+            <div class="slide second"><img src="img/2-3.jpg" alt="plan"></div>
+            <div class="slide third"><img src="img/3.jpg" alt="plan"></div>
+            <div class="slide third"><img src="img/3-2.jpg" alt="plan"></div>
+            <div class="slide third"><img src="img/3-3.jpg" alt="plan"></div>
         </div>
         <button data-modal="modal-order" class="btn">Подобрать планировку</button>
         <h3 class="container">План этажей</h3>
@@ -315,9 +322,6 @@
                     </address>
                     <a class="mail" href="mailto:barnaul@dynasty-24.com">barnaul@dynasty-24.com</a>
                 </div>
-                <div class="col">
-                    <img src="img/logo_2.png" alt="logo">
-                </div>
             </div>
         </div>
     </footer>
@@ -362,9 +366,9 @@
         </div>
     </div>
 
-    <script src="/js/jquery-3.4.1.min.js"></script>
-    <script src="/js/slick.min.js"></script>
-    <script src="/js/scripts.js?ver=12345"></script>
+    <script src="/js/jquery-3.4.1.min.js" defer></script>
+    <script src="/js/slick.min.js" defer></script>
+    <script src="/js/scripts.js?ver=345678" defer></script>
 
 
 </body>

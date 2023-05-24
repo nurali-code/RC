@@ -15,7 +15,7 @@ $('a[href^="#"]').on('click', function (e) {
 
 
 $('.slider').slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 3,
     dots: false,
@@ -23,6 +23,27 @@ $('.slider').slick({
     variableWidth: true,
     centerMode: true,
 });
+$(".planing-slider").slick('slickUnfilter');
+$(".planing-slider").slick('slickFilter', '.one');
+
+$(".filter__btn").on('click', function () {
+    var filter = $(this).data('filter');
+    $(".planing-slider").slick('slickUnfilter');
+
+    if (filter == 'one') {
+        $(".planing-slider").slick('slickFilter', '.one');
+    }
+    else if (filter == 'second') {
+        $(".planing-slider").slick('slickFilter', '.second');
+    }
+    else if (filter == 'third') {
+        $(".planing-slider").slick('slickFilter', '.third');
+    }
+    else if (filter == 'all') {
+        $(".planing-slider").slick('slickUnfilter');
+    }
+
+})
 
 $('.filter__btn').on('click', function () {
     $('.filter__btn').not($(this)).removeClass('active')
